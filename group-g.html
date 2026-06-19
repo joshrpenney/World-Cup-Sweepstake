@@ -1,75 +1,218 @@
-<div class="group-card" id="group-g">
-    <h2>🇧🇪 Group G</h2>
+<!DOCTYPE html><html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Group G</title><style>
 
-    <table>
-        <tr>
-            <th>Team</th>
-            <th>P</th>
-            <th>W</th>
-            <th>D</th>
-            <th>L</th>
-            <th>GF</th>
-            <th>GA</th>
-            <th>GD</th>
-            <th>Pts</th>
-        </tr>
-        <tr>
-            <td>🇧🇪 Belgium</td>
-            <td>1</td>
-            <td>0</td>
-            <td>1</td>
-            <td>0</td>
-            <td>1</td>
-            <td>1</td>
-            <td>0</td>
-            <td>1</td>
-        </tr>
-        <tr>
-            <td>🇪🇬 Egypt</td>
-            <td>1</td>
-            <td>0</td>
-            <td>1</td>
-            <td>0</td>
-            <td>1</td>
-            <td>1</td>
-            <td>0</td>
-            <td>1</td>
-        </tr>
-        <tr>
-            <td>🇮🇷 Iran</td>
-            <td>1</td>
-            <td>0</td>
-            <td>1</td>
-            <td>0</td>
-            <td>2</td>
-            <td>2</td>
-            <td>0</td>
-            <td>1</td>
-        </tr>
-        <tr>
-            <td>🇳🇿 New Zealand</td>
-            <td>1</td>
-            <td>0</td>
-            <td>1</td>
-            <td>0</td>
-            <td>2</td>
-            <td>2</td>
-            <td>0</td>
-            <td>1</td>
-        </tr>
-    </table>
+body{
+    font-family:Arial,sans-serif;
+    background:#071b3a;
+    color:white;
+    margin:0;
+    padding:0;
+}
 
-    <h3>Completed Fixtures</h3>
-    <ul>
-        <li>🇧🇪 Belgium 1-1 Egypt 🇪🇬</li>
-        <li>🇮🇷 Iran 2-2 New Zealand 🇳🇿</li>
-    </ul>
+.header{
+    background:#0d2d63;
+    text-align:center;
+    padding:24px;
+    font-size:38px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
 
-    <h3>Upcoming Fixtures</h3>
-    <ul>
-        <li>🇧🇪 Belgium vs Iran 🇮🇷 — 21 June, 20:00 BST</li>
-        <li>🇳🇿 New Zealand vs Egypt 🇪🇬 — 22 June, 02:00 BST</li>
-        <li>🇳🇿 New Zealand vs Belgium 🇧🇪 — 27 June, 04:00 BST</li>
-        <li>🇪🇬 Egypt vs Iran 🇮🇷 — 27 June, 04:00 BST</li>
-    </ul>
+.section{
+    padding:15px;
+    max-width:900px;
+    margin:auto;
+}
+
+.card{
+    background:#112d5c;
+    border-radius:14px;
+    overflow:hidden;
+    margin-bottom:18px;
+    box-shadow:0 4px 12px rgba(0,0,0,.25);
+}
+
+.card-title{
+    padding:15px 20px;
+    font-size:24px;
+    font-weight:bold;
+    border-bottom:2px solid #284b82;
+}
+
+.home-btn{
+    display:inline-block;
+    background:#163a72;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:8px;
+    margin-bottom:15px;
+    border:1px solid #4b6da3;
+    font-weight:bold;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#163a72;
+    padding:14px 8px;
+    font-size:14px;
+}
+
+td{
+    padding:14px 8px;
+    border-bottom:1px solid #34598f;
+    text-align:center;
+}
+
+.team{
+    text-align:left;
+    font-weight:bold;
+}
+
+.qualify{
+    border-left:5px solid #00c853;
+}
+
+.owner{
+    padding:14px 20px;
+    border-bottom:1px solid #34598f;
+}
+
+.fixture{
+    padding:14px 20px;
+    border-bottom:1px solid #34598f;
+}
+
+.fixture:last-child,
+.owner:last-child{
+    border-bottom:none;
+}
+
+.points{
+    font-weight:bold;
+    color:#ffd54f;
+}
+
+</style></head><body>
+
+<div class="header">
+🏆 GROUP G
 </div>
+
+<div class="section">
+
+<a href="index.html" class="home-btn">Back to Home</a>
+
+<div class="card">
+
+<div class="card-title">📊 Standings</div>
+
+<table>
+
+<tr>
+<th>#</th>
+<th>Team</th>
+<th>P</th>
+<th>W</th>
+<th>D</th>
+<th>L</th>
+<th>GD</th>
+<th>Pts</th>
+</tr>
+
+<tr class="qualify">
+<td>1</td>
+<td class="team">🇮🇷 Iran</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td class="points">1</td>
+</tr>
+
+<tr class="qualify">
+<td>2</td>
+<td class="team">🇳🇿 New Zealand</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td class="points">1</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td class="team">🇧🇪 Belgium</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td class="team">🇪🇬 Egypt</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<div class="card-title">👥 Sweepstake Owners</div>
+
+<div class="owner">🇧🇪 Belgium — James B</div>
+<div class="owner">🇪🇬 Egypt — Sharon</div>
+<div class="owner">🇮🇷 Iran — Sean</div>
+<div class="owner">🇳🇿 New Zealand — Shaun A</div>
+
+</div>
+
+<div class="card">
+
+<div class="card-title">⚽ Results</div>
+
+<div class="fixture">🇧🇪 Belgium 1–1 Egypt 🇪🇬</div>
+<div class="fixture">🇮🇷 Iran 2–2 New Zealand 🇳🇿</div>
+
+</div>
+
+<div class="card">
+
+<div class="card-title">📅 Upcoming Fixtures</div>
+
+<div class="fixture">🇧🇪 Belgium vs Iran 🇮🇷</div>
+<div class="fixture">🕒 20:00 • Houston, USA</div>
+
+<div class="fixture">🇳🇿 New Zealand vs Egypt 🇪🇬</div>
+<div class="fixture">🕒 02:00 • Guadalajara, Mexico</div>
+
+<div class="fixture">🇳🇿 New Zealand vs Belgium 🇧🇪</div>
+<div class="fixture">🕒 04:00 • Vancouver, Canada</div>
+
+<div class="fixture">🇪🇬 Egypt vs Iran 🇮🇷</div>
+<div class="fixture">🕒 04:00 • Monterrey, Mexico</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
