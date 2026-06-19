@@ -1,116 +1,217 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>World Cup Sweepstake</title>
+<title>World Cup Sweepstake</title><style>
 
-<style>
 body{
-font-family:Arial,sans-serif;
-background:#081c3a;
-color:white;
-margin:0;
-padding:0;
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#081c3a;
+    color:white;
 }
 
 .header{
-background:#0c2f66;
-padding:20px;
-text-align:center;
-font-size:28px;
-font-weight:bold;
+    background:linear-gradient(180deg,#12376f,#0c2f66);
+    padding:30px 25px;
+}
+
+.header-title{
+    font-size:38px;
+    font-weight:bold;
+}
+
+.header-subtitle{
+    margin-top:8px;
+    color:#c7d6f2;
+    font-size:16px;
 }
 
 .section{
-padding:15px;
+    padding:20px;
 }
 
 .card{
-background:#102a52;
-padding:15px;
-margin-bottom:12px;
-border-radius:12px;
+    background:#102a52;
+    border-radius:16px;
+    padding:20px;
+    margin-bottom:20px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.25);
+}
+
+.update-card{
+    background:linear-gradient(90deg,#12376f,#0c2f66);
+    border-left:5px solid #ffd54f;
+}
+
+.update-title{
+    font-size:14px;
+    font-weight:bold;
+    letter-spacing:2px;
+    color:#ffd54f;
+    margin-bottom:6px;
+}
+
+.update-time{
+    font-size:18px;
+}
+
+h1{
+    margin:0 0 20px 0;
+    font-size:48px;
 }
 
 h2{
-margin-top:0;
+    margin-top:0;
 }
 
-.match{
-padding:10px 0;
-border-bottom:1px solid #234;
+.fixture{
+    padding:18px 0;
+    border-bottom:1px solid #36568d;
 }
 
-.owner{
-color:#ccc;
-font-size:14px;
+.fixture:last-child{
+    border-bottom:none;
 }
 
-.button{
-display:inline-block;
-background:#f7c948;
-color:black;
-padding:10px 15px;
-margin:4px;
-border-radius:8px;
-font-weight:bold;
+.fixture-match{
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:8px;
 }
 
-a.button{
-text-decoration:none;
+.fixture-time{
+    color:#ffd54f;
+    font-weight:bold;
+    margin-bottom:8px;
 }
-  
-</style>
 
-</head>
+.fixture-owner{
+    color:#b9c7e2;
+    font-size:18px;
+}
 
-<body>
+.prize-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:14px 0;
+    border-bottom:1px solid #36568d;
+}
 
-<div class="header">
-🏆 World Cup Sweepstake
-</div>
+.prize-row:last-of-type{
+    border-bottom:none;
+}
 
-<div class="section">
+.prize-row strong{
+    color:#ffd54f;
+    font-size:22px;
+}
 
-<h2>Today's Fixtures</h2>
+.prize-total{
+    margin-top:15px;
+    padding-top:15px;
+    border-top:2px solid #36568d;
+    text-align:center;
+    font-size:24px;
+    font-weight:bold;
+    color:#ffd54f;
+}
 
-<div class="card">
+.groups-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
 
-<div class="match">
-USA vs Australia<br>
-<span class="owner">Quayle vs Dale</span>
-</div>
+.group-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-<div class="match">
-Scotland vs Morocco<br>
-<span class="owner">Tony vs Josh</span>
-</div>
+    height:80px;
 
-</div>
+    background:linear-gradient(180deg,#ffd95a,#e6b93d);
 
-<h2>Groups</h2>
+    color:black;
+    text-decoration:none;
 
-<div class="card">
+    font-size:32px;
+    font-weight:bold;
 
-<a href="group-a.html" class="button">A</a>
-<a href="group-b.html" class="button">B</a>
-<a href="tables.html" class="button">C</a>
-<a href="tables.html" class="button">D</a>
-<a href="tables.html" class="button">E</a>
-<a href="tables.html" class="button">F</a>
+    border-radius:14px;
 
-<br><br>
+    border:2px solid #c99c23;
 
-<a href="tables.html" class="button">G</a>
-<a href="tables.html" class="button">H</a>
-<a href="tables.html" class="button">I</a>
-<a href="tables.html" class="button">J</a>
-<a href="tables.html" class="button">K</a>
-<a href="tables.html" class="button">L</a>
+    box-shadow:
+        0 4px 8px rgba(0,0,0,.35),
+        inset 0 1px 0 rgba(255,255,255,.4);
 
-</div>
+    transition:all .2s ease;
+}
 
-</div>
+.group-btn:hover{
+    transform:translateY(-3px);
+}
 
-</body>
+.group-btn:active{
+    transform:translateY(2px);
+}
+
+.subtitle{
+    color:#a9bddf;
+    margin-top:-10px;
+    margin-bottom:20px;
+}
+
+</style></head><body><div class="header">
+    <div class="header-title">🏆 World Cup Sweepstake</div>
+    <div class="header-subtitle">
+        FIFA World Cup 2026 • Sweepstake Tracker
+    </div>
+</div><div class="section"><div class="card update-card">
+    <div class="update-title">LIVE TOURNAMENT TRACKER</div>
+    <div class="update-time">
+        Last Updated: 17 July 2026 • 14:30 BST
+    </div>
+</div><h1>Today's Fixtures</h1><div class="card"><div class="fixture">
+    <div class="fixture-match">🇺🇸 USA vs Australia 🇦🇺</div>
+    <div class="fixture-time">🕒 18:00 BST</div>
+    <div class="fixture-owner">Quayle vs Dale</div>
+</div><div class="fixture">
+    <div class="fixture-match">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland vs Morocco 🇲🇦</div>
+    <div class="fixture-time">🕒 21:00 BST</div>
+    <div class="fixture-owner">Tony vs Josh</div>
+</div></div><div class="card"><h2>💰 Prize Pot</h2><div class="prize-row">
+    <span>🥇 1st Place</span>
+    <strong>£300</strong>
+</div><div class="prize-row">
+    <span>🥈 2nd Place</span>
+    <strong>£120</strong>
+</div><div class="prize-row">
+    <span>🥉 3rd Place</span>
+    <strong>£60</strong>
+</div><div class="prize-row">
+    <span>🏅 4th Place</span>
+    <strong>£30</strong>
+</div><div class="prize-total">
+    Total Prize Pot: £510
+</div></div><h1>Groups</h1><p class="subtitle">
+Tap a group to view standings, results and fixtures
+</p><div class="card"><div class="groups-grid"><a href="group-a.html" class="group-btn">A</a>
+<a href="group-b.html" class="group-btn">B</a>
+<a href="group-c.html" class="group-btn">C</a>
+
+<a href="group-d.html" class="group-btn">D</a>
+<a href="group-e.html" class="group-btn">E</a>
+<a href="group-f.html" class="group-btn">F</a>
+
+<a href="group-g.html" class="group-btn">G</a>
+<a href="group-h.html" class="group-btn">H</a>
+<a href="group-i.html" class="group-btn">I</a>
+
+<a href="group-j.html" class="group-btn">J</a>
+<a href="group-k.html" class="group-btn">K</a>
+<a href="group-l.html" class="group-btn">L</a>
+
+</div></div></div></body>
 </html>
