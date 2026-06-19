@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html>
+
+<!DOCTYPE html><html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Group A</title>
+<title>Group A</title><style>
 
-<style>
 body{
 font-family:Arial,sans-serif;
 background:#081c3a;
@@ -17,7 +16,7 @@ padding:0;
 background:#0c2f66;
 padding:20px;
 text-align:center;
-font-size:28px;
+font-size:30px;
 font-weight:bold;
 }
 
@@ -28,8 +27,12 @@ padding:15px;
 .card{
 background:#102a52;
 padding:15px;
-border-radius:12px;
 margin-bottom:15px;
+border-radius:12px;
+}
+
+h2{
+margin-top:0;
 }
 
 table{
@@ -37,13 +40,15 @@ width:100%;
 border-collapse:collapse;
 }
 
-th,td{
-padding:8px;
+th{
 text-align:left;
+padding:10px;
+border-bottom:1px solid #345;
 }
 
-th{
-border-bottom:1px solid #345;
+td{
+padding:10px;
+border-bottom:1px solid #234;
 }
 
 .home-btn{
@@ -56,54 +61,45 @@ font-weight:bold;
 text-decoration:none;
 margin-bottom:15px;
 }
-</style>
 
-</head>
+.owner{
+padding:8px 0;
+}
 
-<body>
+.fixture{
+padding:8px 0;
+}
 
-<div class="header">
-Group A
-</div>
+</style></head><body><div class="header">
+🏆 GROUP A
+</div><div class="section"><a href="index.html" class="home-btn">🏠 Home</a>
 
-<div class="section">
-
-<a href="index.html" class="home-btn">Home</a>
-
-<div class="card">
-<h2>Table</h2>
-
-<table>
-<tr>
+<div class="card"><h2>📊 Standings</h2><table><tr>
+<th>Pos</th>
 <th>Team</th>
 <th>Pts</th>
-</tr>
-
-<tr>
+</tr><tr>
+<td>1</td>
 <td>Mexico</td>
 <td>6</td>
-</tr>
-
-<tr>
+</tr><tr>
+<td>2</td>
 <td>South Korea</td>
 <td>3</td>
-</tr>
-
-<tr>
+</tr><tr>
+<td>3</td>
 <td>Czechia</td>
 <td>1</td>
-</tr>
-
-<tr>
+</tr><tr>
+<td>4</td>
 <td>South Africa</td>
 <td>1</td>
-</tr>
-
-</table>
-
-</div>
-
-</div>
-
-</body>
+</tr></table></div><div class="card"><h2>👥 Sweepstake Owners</h2><div class="owner">🇲🇽 Mexico → Owner</div>
+<div class="owner">🇰🇷 South Korea → Owner</div>
+<div class="owner">🇨🇿 Czechia → Owner</div>
+<div class="owner">🇿🇦 South Africa → Owner</div></div><div class="card"><h2>⚽ Results</h2><div class="fixture">Mexico 2-0 South Africa</div>
+<div class="fixture">South Korea 2-1 Czechia</div>
+<div class="fixture">Czechia 1-1 South Africa</div>
+<div class="fixture">Mexico 1-0 South Korea</div></div><div class="card"><h2>📅 Upcoming Fixtures</h2><div class="fixture">Mexico vs Czechia</div>
+<div class="fixture">South Korea vs South Africa</div></div></div></body>
 </html>
