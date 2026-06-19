@@ -1,224 +1,75 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Group J</title>
+<div class="group-card" id="group-j">
+    <h2>🇦🇷 Group J</h2>
 
-<style>
+    <table>
+        <tr>
+            <th>Team</th>
+            <th>P</th>
+            <th>W</th>
+            <th>D</th>
+            <th>L</th>
+            <th>GF</th>
+            <th>GA</th>
+            <th>GD</th>
+            <th>Pts</th>
+        </tr>
+        <tr>
+            <td>🇦🇷 Argentina</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>3</td>
+            <td>0</td>
+            <td>+3</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>🇦🇹 Austria</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>3</td>
+            <td>1</td>
+            <td>+2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>🇯🇴 Jordan</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>3</td>
+            <td>-2</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>🇩🇿 Algeria</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>3</td>
+            <td>-3</td>
+            <td>0</td>
+        </tr>
+    </table>
 
-body{
-    font-family:Arial,sans-serif;
-    background:#071b3a;
-    color:white;
-    margin:0;
-    padding:0;
-}
+    <h3>Completed Fixtures</h3>
+    <ul>
+        <li>🇦🇷 Argentina 3-0 Algeria 🇩🇿</li>
+        <li>🇦🇹 Austria 3-1 Jordan 🇯🇴</li>
+    </ul>
 
-.header{
-    background:#0d2d63;
-    text-align:center;
-    padding:24px;
-    font-size:38px;
-    font-weight:bold;
-    letter-spacing:2px;
-}
-
-.section{
-    padding:15px;
-    max-width:900px;
-    margin:auto;
-}
-
-.card{
-    background:#112d5c;
-    border-radius:14px;
-    overflow:hidden;
-    margin-bottom:18px;
-    box-shadow:0 4px 12px rgba(0,0,0,.25);
-}
-
-.card-title{
-    padding:15px 20px;
-    font-size:24px;
-    font-weight:bold;
-    border-bottom:2px solid #284b82;
-}
-
-.home-btn{
-    display:inline-block;
-    background:#163a72;
-    color:white;
-    text-decoration:none;
-    padding:12px 20px;
-    border-radius:8px;
-    margin-bottom:15px;
-    border:1px solid #4b6da3;
-    font-weight:bold;
-}
-
-table{
-    width:100%;
-    border-collapse:collapse;
-}
-
-th{
-    background:#163a72;
-    padding:14px 8px;
-    font-size:14px;
-}
-
-td{
-    padding:14px 8px;
-    border-bottom:1px solid #34598f;
-    text-align:center;
-}
-
-.team{
-    text-align:left;
-    font-weight:bold;
-}
-
-.qualify{
-    border-left:5px solid #00c853;
-}
-
-.owner{
-    padding:14px 20px;
-    border-bottom:1px solid #34598f;
-}
-
-.fixture{
-    padding:14px 20px;
-    border-bottom:1px solid #34598f;
-}
-
-.fixture:last-child,
-.owner:last-child{
-    border-bottom:none;
-}
-
-.points{
-    font-weight:bold;
-    color:#ffd54f;
-}
-
-</style>
-</head>
-
-<body>
-
-<div class="header">
-🏆 GROUP J
+    <h3>Upcoming Fixtures</h3>
+    <ul>
+        <li>🇦🇷 Argentina vs Austria 🇦🇹 — 22 June, 18:00 BST</li>
+        <li>🇯🇴 Jordan vs Algeria 🇩🇿 — 23 June, 04:00 BST</li>
+        <li>🇩🇿 Algeria vs Austria 🇦🇹 — 28 June, 03:00 BST</li>
+        <li>🇯🇴 Jordan vs Argentina 🇦🇷 — 28 June, 03:00 BST</li>
+    </ul>
 </div>
-
-<div class="section">
-
-<a href="index.html" class="home-btn">Back to Home</a>
-
-<div class="card">
-
-<div class="card-title">📊 Standings</div>
-
-<table>
-
-<tr>
-<th>#</th>
-<th>Team</th>
-<th>P</th>
-<th>W</th>
-<th>D</th>
-<th>L</th>
-<th>GD</th>
-<th>Pts</th>
-</tr>
-
-<tr class="qualify">
-<td>1</td>
-<td class="team">🇦🇷 Argentina</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>+3</td>
-<td class="points">3</td>
-</tr>
-
-<tr class="qualify">
-<td>2</td>
-<td class="team">🇦🇹 Austria</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>+2</td>
-<td class="points">3</td>
-</tr>
-
-<tr>
-<td>3</td>
-<td class="team">🇯🇴 Jordan</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>-2</td>
-<td>0</td>
-</tr>
-
-<tr>
-<td>4</td>
-<td class="team">🇩🇿 Algeria</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>-3</td>
-<td>0</td>
-</tr>
-
-</table>
-
-</div>
-
-<div class="card">
-
-<div class="card-title">👥 Sweepstake Owners</div>
-
-<div class="owner">🇦🇷 Argentina — Sharon</div>
-<div class="owner">🇩🇿 Algeria — Paul</div>
-<div class="owner">🇦🇹 Austria — Paul</div>
-<div class="owner">🇯🇴 Jordan — Georgia</div>
-
-</div>
-
-<div class="card">
-
-<div class="card-title">⚽ Results</div>
-
-<div class="fixture">🇦🇷 Argentina 3–0 Algeria 🇩🇿</div>
-<div class="fixture">🇦🇹 Austria 3–1 Jordan 🇯🇴</div>
-
-</div>
-
-<div class="card">
-
-<div class="card-title">📅 Upcoming Fixtures</div>
-
-<div class="fixture">🇦🇷 Argentina vs Austria 🇦🇹</div>
-<div class="fixture">🕒 03:00 • Kansas City, USA</div>
-
-<div class="fixture">🇯🇴 Jordan vs Algeria 🇩🇿</div>
-<div class="fixture">🕒 03:00 • Arlington, USA</div>
-
-<div class="fixture">🇩🇿 Algeria vs Austria 🇦🇹</div>
-<div class="fixture">🕒 03:00 • Kansas City, USA</div>
-
-<div class="fixture">🇯🇴 Jordan vs Argentina 🇦🇷</div>
-<div class="fixture">🕒 03:00 • Arlington, USA</div>
-
-</div>
-
-</div>
-
-</body>
-</html>
