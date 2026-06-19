@@ -1,224 +1,75 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Group F</title>
+<div class="group-card" id="group-f">
+    <h2>🇳🇱 Group F</h2>
 
-<style>
+    <table>
+        <tr>
+            <th>Team</th>
+            <th>P</th>
+            <th>W</th>
+            <th>D</th>
+            <th>L</th>
+            <th>GF</th>
+            <th>GA</th>
+            <th>GD</th>
+            <th>Pts</th>
+        </tr>
+        <tr>
+            <td>🇸🇪 Sweden</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>5</td>
+            <td>1</td>
+            <td>+4</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>🇳🇱 Netherlands</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>2</td>
+            <td>2</td>
+            <td>0</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>🇯🇵 Japan</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>2</td>
+            <td>2</td>
+            <td>0</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>🇹🇳 Tunisia</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>5</td>
+            <td>-4</td>
+            <td>0</td>
+        </tr>
+    </table>
 
-body{
-    font-family:Arial,sans-serif;
-    background:#071b3a;
-    color:white;
-    margin:0;
-    padding:0;
-}
+    <h3>Completed Fixtures</h3>
+    <ul>
+        <li>🇸🇪 Sweden 5-1 Tunisia 🇹🇳</li>
+        <li>🇳🇱 Netherlands 2-2 Japan 🇯🇵</li>
+    </ul>
 
-.header{
-    background:#0d2d63;
-    text-align:center;
-    padding:24px;
-    font-size:38px;
-    font-weight:bold;
-    letter-spacing:2px;
-}
-
-.section{
-    padding:15px;
-    max-width:900px;
-    margin:auto;
-}
-
-.card{
-    background:#112d5c;
-    border-radius:14px;
-    overflow:hidden;
-    margin-bottom:18px;
-    box-shadow:0 4px 12px rgba(0,0,0,.25);
-}
-
-.card-title{
-    padding:15px 20px;
-    font-size:24px;
-    font-weight:bold;
-    border-bottom:2px solid #284b82;
-}
-
-.home-btn{
-    display:inline-block;
-    background:#163a72;
-    color:white;
-    text-decoration:none;
-    padding:12px 20px;
-    border-radius:8px;
-    margin-bottom:15px;
-    border:1px solid #4b6da3;
-    font-weight:bold;
-}
-
-table{
-    width:100%;
-    border-collapse:collapse;
-}
-
-th{
-    background:#163a72;
-    padding:14px 8px;
-    font-size:14px;
-}
-
-td{
-    padding:14px 8px;
-    border-bottom:1px solid #34598f;
-    text-align:center;
-}
-
-.team{
-    text-align:left;
-    font-weight:bold;
-}
-
-.qualify{
-    border-left:5px solid #00c853;
-}
-
-.owner{
-    padding:14px 20px;
-    border-bottom:1px solid #34598f;
-}
-
-.fixture{
-    padding:14px 20px;
-    border-bottom:1px solid #34598f;
-}
-
-.fixture:last-child,
-.owner:last-child{
-    border-bottom:none;
-}
-
-.points{
-    font-weight:bold;
-    color:#ffd54f;
-}
-
-</style>
-</head>
-
-<body>
-
-<div class="header">
-🏆 GROUP F
+    <h3>Upcoming Fixtures</h3>
+    <ul>
+        <li>🇳🇱 Netherlands vs Sweden 🇸🇪 — 20 June, 18:00 BST</li>
+        <li>🇹🇳 Tunisia vs Japan 🇯🇵 — 21 June, 05:00 BST</li>
+        <li>🇹🇳 Tunisia vs Netherlands 🇳🇱 — 26 June, 00:00 BST</li>
+        <li>🇯🇵 Japan vs Sweden 🇸🇪 — 26 June, 00:00 BST</li>
+    </ul>
 </div>
-
-<div class="section">
-
-<a href="index.html" class="home-btn">Back to Home</a>
-
-<div class="card">
-
-<div class="card-title">📊 Standings</div>
-
-<table>
-
-<tr>
-<th>#</th>
-<th>Team</th>
-<th>P</th>
-<th>W</th>
-<th>D</th>
-<th>L</th>
-<th>GD</th>
-<th>Pts</th>
-</tr>
-
-<tr class="qualify">
-<td>1</td>
-<td class="team">🇸🇪 Sweden</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>+4</td>
-<td class="points">3</td>
-</tr>
-
-<tr class="qualify">
-<td>2</td>
-<td class="team">🇯🇵 Japan</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td class="points">1</td>
-</tr>
-
-<tr>
-<td>3</td>
-<td class="team">🇳🇱 Netherlands</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-
-<tr>
-<td>4</td>
-<td class="team">🇹🇳 Tunisia</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>-4</td>
-<td>0</td>
-</tr>
-
-</table>
-
-</div>
-
-<div class="card">
-
-<div class="card-title">👥 Sweepstake Owners</div>
-
-<div class="owner">🇳🇱 Netherlands — Brian</div>
-<div class="owner">🇯🇵 Japan — Georgia</div>
-<div class="owner">🇸🇪 Sweden — Matt M</div>
-<div class="owner">🇹🇳 Tunisia — Janet</div>
-
-</div>
-
-<div class="card">
-
-<div class="card-title">⚽ Results</div>
-
-<div class="fixture">🇳🇱 Netherlands 2–2 Japan 🇯🇵</div>
-<div class="fixture">🇸🇪 Sweden 5–1 Tunisia 🇹🇳</div>
-
-</div>
-
-<div class="card">
-
-<div class="card-title">📅 Upcoming Fixtures</div>
-
-<div class="fixture">🇳🇱 Netherlands vs Sweden 🇸🇪</div>
-<div class="fixture">🕒 21:00 • Houston, USA</div>
-
-<div class="fixture">🇹🇳 Tunisia vs Japan 🇯🇵</div>
-<div class="fixture">🕒 21:00 • Guadalajara, Mexico</div>
-
-<div class="fixture">🇹🇳 Tunisia vs Netherlands 🇳🇱</div>
-<div class="fixture">🕒 21:00 • Guadalajara, Mexico</div>
-
-<div class="fixture">🇯🇵 Japan vs Sweden 🇸🇪</div>
-<div class="fixture">🕒 21:00 • Houston, USA</div>
-
-</div>
-
-</div>
-
-</body>
-</html>
