@@ -1,105 +1,226 @@
-<h1>🏆 GROUP E</h1>
+<!DOCTYPE html>
+<html>
 
-<a href="index.html" class="back-button">Back to Home</a>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Group E</title>
+
+<style>
+
+body{
+    font-family:Arial,sans-serif;
+    background:#071b3a;
+    color:white;
+    margin:0;
+    padding:0;
+}
+
+.header{
+    background:#0d2d63;
+    text-align:center;
+    padding:24px;
+    font-size:38px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.section{
+    padding:15px;
+    max-width:900px;
+    margin:auto;
+}
+
+.card{
+    background:#112d5c;
+    border-radius:14px;
+    overflow:hidden;
+    margin-bottom:18px;
+    box-shadow:0 4px 12px rgba(0,0,0,.25);
+}
+
+.card-title{
+    padding:15px 20px;
+    font-size:24px;
+    font-weight:bold;
+    border-bottom:2px solid #284b82;
+}
+
+.home-btn{
+    display:inline-block;
+    background:#163a72;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:8px;
+    margin-bottom:15px;
+    border:1px solid #4b6da3;
+    font-weight:bold;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#163a72;
+    padding:14px 8px;
+    font-size:14px;
+}
+
+td{
+    padding:14px 8px;
+    border-bottom:1px solid #34598f;
+    text-align:center;
+}
+
+.team{
+    text-align:left;
+    font-weight:bold;
+}
+
+.qualify{
+    border-left:5px solid #00c853;
+}
+
+.owner{
+    padding:14px 20px;
+    border-bottom:1px solid #34598f;
+}
+
+.fixture{
+    padding:14px 20px;
+    border-bottom:1px solid #34598f;
+}
+
+.fixture:last-child,
+.owner:last-child{
+    border-bottom:none;
+}
+
+.points{
+    font-weight:bold;
+    color:#ffd54f;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+🏆 GROUP E
+</div>
+
+<div class="section">
+
+<a href="index.html" class="home-btn">Back to Home</a>
 
 <div class="card">
-    <h2>📊 Standings</h2>
 
-    <table>
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Team</th>
-                <th>P</th>
-                <th>W</th>
-                <th>D</th>
-                <th>L</th>
-                <th>GD</th>
-                <th>Pts</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>🇩🇪 Germany</td>
-                <td>1</td>
-                <td>1</td>
-                <td>0</td>
-                <td>0</td>
-                <td>+6</td>
-                <td><strong>3</strong></td>
-            </tr>
+<div class="card-title">📊 Standings</div>
 
-            <tr>
-                <td>2</td>
-                <td>🇨🇮 Côte d'Ivoire</td>
-                <td>1</td>
-                <td>1</td>
-                <td>0</td>
-                <td>0</td>
-                <td>+1</td>
-                <td><strong>3</strong></td>
-            </tr>
+<table>
 
-            <tr>
-                <td>3</td>
-                <td>🇪🇨 Ecuador</td>
-                <td>1</td>
-                <td>0</td>
-                <td>0</td>
-                <td>1</td>
-                <td>-1</td>
-                <td>0</td>
-            </tr>
+<tr>
+<th>#</th>
+<th>Team</th>
+<th>P</th>
+<th>W</th>
+<th>D</th>
+<th>L</th>
+<th>GD</th>
+<th>Pts</th>
+</tr>
 
-            <tr>
-                <td>4</td>
-                <td>🇨🇼 Curaçao</td>
-                <td>1</td>
-                <td>0</td>
-                <td>0</td>
-                <td>1</td>
-                <td>-6</td>
-                <td>0</td>
-            </tr>
-        </tbody>
-    </table>
+<tr class="qualify">
+<td>1</td>
+<td class="team">🇩🇪 Germany</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>+6</td>
+<td class="points">3</td>
+</tr>
+
+<tr class="qualify">
+<td>2</td>
+<td class="team">🇨🇮 Côte d'Ivoire</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>+1</td>
+<td class="points">3</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td class="team">🇪🇨 Ecuador</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>-1</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td class="team">🇨🇼 Curaçao</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>-6</td>
+<td>0</td>
+</tr>
+
+</table>
+
 </div>
 
 <div class="card">
-    <h2>👥 Sweepstake Owners</h2>
 
-    <div>🇩🇪 Germany — OWNER</div>
-    <div>🇨🇮 Côte d'Ivoire — OWNER</div>
-    <div>🇪🇨 Ecuador — OWNER</div>
-    <div>🇨🇼 Curaçao — OWNER</div>
+<div class="card-title">👥 Sweepstake Owners</div>
+
+<div class="owner">🇩🇪 Germany — OWNER</div>
+<div class="owner">🇨🇮 Côte d'Ivoire — OWNER</div>
+<div class="owner">🇪🇨 Ecuador — OWNER</div>
+<div class="owner">🇨🇼 Curaçao — OWNER</div>
+
 </div>
 
 <div class="card">
-    <h2>⚽ Results</h2>
 
-    <div>🇩🇪 Germany 7–1 Curaçao 🇨🇼</div>
-    <div>🇨🇮 Côte d'Ivoire 1–0 Ecuador 🇪🇨</div>
+<div class="card-title">⚽ Results</div>
+
+<div class="fixture">🇩🇪 Germany 7–1 Curaçao 🇨🇼</div>
+<div class="fixture">🇨🇮 Côte d'Ivoire 1–0 Ecuador 🇪🇨</div>
+
 </div>
 
 <div class="card">
-    <h2>📅 Upcoming Fixtures</h2>
 
-    <div>🇩🇪 Germany vs Côte d'Ivoire 🇨🇮</div>
-    <div>🕘 21:00 • Houston, USA</div>
+<div class="card-title">📅 Upcoming Fixtures</div>
 
-    <hr>
+<div class="fixture">🇩🇪 Germany vs Côte d'Ivoire 🇨🇮</div>
+<div class="fixture">🕘 21:00 • Houston, USA</div>
 
-    <div>🇪🇨 Ecuador vs Curaçao 🇨🇼</div>
-    <div>🕘 21:00 • Philadelphia, USA</div>
+<div class="fixture">🇪🇨 Ecuador vs Curaçao 🇨🇼</div>
+<div class="fixture">🕐 01:00 • Philadelphia, USA</div>
 
-    <hr>
+<div class="fixture">🇨🇼 Curaçao vs Côte d'Ivoire 🇨🇮</div>
+<div class="fixture">🕘 21:00 • Atlanta, USA</div>
 
-    <div>🇨🇼 Curaçao vs Côte d'Ivoire 🇨🇮</div>
-    <div>🕘 21:00 • Atlanta, USA</div>
+<div class="fixture">🇪🇨 Ecuador vs Germany 🇩🇪</div>
+<div class="fixture">🕘 21:00 • Seattle, USA</div>
 
-    <hr>
-
-    <div>🇪🇨 Ecuador vs Germany 🇩🇪</div>
-    <div>🕘 21:00 • Seattle, USA</div>
 </div>
+
+</div>
+
+</body>
+</html>
