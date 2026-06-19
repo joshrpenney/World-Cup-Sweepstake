@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Group A</title>
@@ -8,87 +7,106 @@
 <style>
 
 body{
-font-family:Arial,sans-serif;
-background:#081c3a;
-color:white;
-margin:0;
-padding:0;
+    font-family:Arial,sans-serif;
+    background:#071b3a;
+    color:white;
+    margin:0;
+    padding:0;
 }
 
 .header{
-background:#0c2f66;
-padding:25px;
-text-align:center;
-font-size:36px;
-font-weight:bold;
-letter-spacing:1px;
+    background:#0d2d63;
+    text-align:center;
+    padding:24px;
+    font-size:38px;
+    font-weight:bold;
+    letter-spacing:2px;
 }
 
 .section{
-padding:15px;
+    padding:15px;
+    max-width:900px;
+    margin:auto;
 }
 
 .card{
-background:#102a52;
-padding:15px;
-margin-bottom:15px;
-border-radius:12px;
+    background:#112d5c;
+    border-radius:14px;
+    overflow:hidden;
+    margin-bottom:18px;
+    box-shadow:0 4px 12px rgba(0,0,0,.25);
+}
+
+.card-title{
+    padding:15px 20px;
+    font-size:24px;
+    font-weight:bold;
+    border-bottom:2px solid #284b82;
 }
 
 .home-btn{
-display:inline-block;
-background:#f7c948;
-color:black;
-padding:10px 15px;
-border-radius:8px;
-font-weight:bold;
-text-decoration:none;
-margin-bottom:15px;
+    display:inline-block;
+    background:#163a72;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:8px;
+    margin-bottom:15px;
+    border:1px solid #4b6da3;
+    font-weight:bold;
 }
 
-h2{
-margin-top:0;
+.home-btn:hover{
+    background:#1d488d;
 }
 
 table{
-width:100%;
-border-collapse:collapse;
+    width:100%;
+    border-collapse:collapse;
 }
 
 th{
-background:#163a72;
-padding:12px;
-text-align:center;
-font-size:14px;
+    background:#163a72;
+    padding:14px 8px;
+    font-size:14px;
 }
 
 td{
-padding:12px;
-text-align:center;
-border-bottom:1px solid #234;
+    padding:14px 8px;
+    border-bottom:1px solid #34598f;
+    text-align:center;
 }
 
 .team{
-text-align:left;
-font-weight:bold;
+    text-align:left;
+    font-weight:bold;
 }
 
 .qualify{
-border-left:4px solid #00d26a;
+    border-left:5px solid #00c853;
 }
 
 .owner{
-padding:8px 0;
-font-size:18px;
+    padding:14px 20px;
+    border-bottom:1px solid #34598f;
 }
 
 .fixture{
-padding:10px 0;
-border-bottom:1px solid #234;
+    padding:14px 20px;
+    border-bottom:1px solid #34598f;
+}
+
+.fixture:last-child,
+.owner:last-child{
+    border-bottom:none;
+}
+
+.points{
+    font-weight:bold;
+    color:#ffd54f;
 }
 
 </style>
-
 </head>
 
 <body>
@@ -99,11 +117,11 @@ border-bottom:1px solid #234;
 
 <div class="section">
 
-<a href="index.html" class="home-btn">🏠 Home</a>
+<a href="index.html" class="home-btn">Back to Home</a>
 
 <div class="card">
 
-<h2>📊 Standings</h2>
+<div class="card-title">📊 Standings</div>
 
 <table>
 
@@ -126,7 +144,7 @@ border-bottom:1px solid #234;
 <td>0</td>
 <td>0</td>
 <td>+3</td>
-<td><b>6</b></td>
+<td class="points">6</td>
 </tr>
 
 <tr class="qualify">
@@ -137,7 +155,7 @@ border-bottom:1px solid #234;
 <td>0</td>
 <td>1</td>
 <td>0</td>
-<td><b>3</b></td>
+<td class="points">3</td>
 </tr>
 
 <tr>
@@ -168,29 +186,29 @@ border-bottom:1px solid #234;
 
 <div class="card">
 
-<h2>👥 Sweepstake Owners</h2>
+<div class="card-title">👥 Sweepstake Owners</div>
 
-<div class="owner">🇲🇽 Mexico → Jamie L</div>
-<div class="owner">🇿🇦 South Africa → Sean</div>
-<div class="owner">🇰🇷 South Korea → Sophie</div>
-<div class="owner">🇨🇿 Czechia → Peter Novak</div>
-
-</div>
-
-<div class="card">
-
-<h2>⚽ Results</h2>
-
-<div class="fixture">🇲🇽 Mexico 2-0 South Africa 🇿🇦</div>
-<div class="fixture">🇰🇷 South Korea 2-1 Czechia 🇨🇿</div>
-<div class="fixture">🇨🇿 Czechia 1-1 South Africa 🇿🇦</div>
-<div class="fixture">🇲🇽 Mexico 1-0 South Korea 🇰🇷</div>
+<div class="owner">🇲🇽 Mexico — Jamie L</div>
+<div class="owner">🇿🇦 South Africa — Sean</div>
+<div class="owner">🇰🇷 South Korea — Sophie</div>
+<div class="owner">🇨🇿 Czechia — Peter Novak</div>
 
 </div>
 
 <div class="card">
 
-<h2>📅 Upcoming Fixtures</h2>
+<div class="card-title">⚽ Results</div>
+
+<div class="fixture">🇲🇽 Mexico 2–0 South Africa 🇿🇦</div>
+<div class="fixture">🇰🇷 South Korea 2–1 Czechia 🇨🇿</div>
+<div class="fixture">🇨🇿 Czechia 1–1 South Africa 🇿🇦</div>
+<div class="fixture">🇲🇽 Mexico 1–0 South Korea 🇰🇷</div>
+
+</div>
+
+<div class="card">
+
+<div class="card-title">📅 Upcoming Fixtures</div>
 
 <div class="fixture">🇲🇽 Mexico vs Czechia 🇨🇿</div>
 <div class="fixture">🇰🇷 South Korea vs South Africa 🇿🇦</div>
