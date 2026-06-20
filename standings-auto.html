@@ -1,0 +1,186 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Cup Standings</title><style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#071b3a;
+    color:white;
+}
+
+.header{
+    background:#0d2d63;
+    text-align:center;
+    padding:25px;
+    font-size:32px;
+    font-weight:bold;
+}
+
+.section{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+
+.home-btn{
+    display:inline-block;
+    background:#163a72;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:8px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.card{
+    background:#112d5c;
+    border-radius:14px;
+    overflow:hidden;
+    margin-bottom:25px;
+    box-shadow:0 4px 12px rgba(0,0,0,.25);
+}
+
+.card-title{
+    background:#163a72;
+    padding:15px;
+    font-size:26px;
+    font-weight:bold;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#163a72;
+    padding:10px;
+}
+
+td{
+    padding:10px;
+    text-align:center;
+    border-bottom:1px solid rgba(255,255,255,.15);
+}
+
+.team{
+    text-align:left;
+    font-weight:bold;
+}
+
+.qualify{
+    background:rgba(0,180,120,.20);
+}
+
+@media(max-width:700px){
+    th,td{
+        padding:8px 4px;
+        font-size:12px;
+    }
+}
+</style></head><body><div class="header">
+🏆 World Cup Standings
+</div><div class="section"><a href="index.html" class="home-btn">⬅ Back Home</a>
+
+<div id="tables">
+Loading standings...
+</div></div><script>
+
+const CSV_URL =
+"https://docs.google.com/spreadsheets/d/e/2PACX-1vQaKYwmHbARFLW4_a7kRmOMY3vUZgCAVHuz5Ao04V2Jjcn_RhBtKa698sq2dBqVN3p4J0yuGW7LPZKQ/pub?gid=2051073478&single=true&output=csv";
+
+fetch(CSV_URL)
+.then(r => r.text())
+.then(csv => {
+
+    const rows = csv.trim().split("\n")
+        .map(r => r.split(","));
+
+    const data = rows.slice(1);
+
+    const groups = {};
+
+    data.forEach(row => {
+
+        const group = row[0];
+
+        if(!groups[group]){
+            groups[group] = [];
+        }
+
+        groups[group].push({
+            pos: row[1],
+            team: row[2],
+            p: row[3],
+            w: row[4],
+            d: row[5],
+            l: row[6],
+            gf: row[7],
+            ga: row[8],
+            gd: row[9],
+            pts: row[10]
+        });
+
+    });
+
+    let html = "";
+
+    Object.keys(groups).forEach(group => {
+
+        html += `
+        <div class="card">
+            <div class="card-title">Group ${group}</div>
+
+            <table>
+                <tr>
+                    <th>Pos</th>
+                    <th>Team</th>
+                    <th>P</th>
+                    <th>W</th>
+                    <th>D</th>
+                    <th>L</th>
+                    <th>GF</th>
+                    <th>GA</th>
+                    <th>GD</th>
+                    <th>Pts</th>
+                </tr>
+        `;
+
+        groups[group].forEach((team,index) => {
+
+            html += `
+            <tr class="${index < 2 ? 'qualify' : ''}">
+                <td>${team.pos}</td>
+                <td class="team">${team.team}</td>
+                <td>${team.p}</td>
+                <td>${team.w}</td>
+                <td>${team.d}</td>
+                <td>${team.l}</td>
+                <td>${team.gf}</td>
+                <td>${team.ga}</td>
+                <td>${team.gd}</td>
+                <td>${team.pts}</td>
+            </tr>
+            `;
+        });
+
+        html += `
+            </table>
+        </div>
+        `;
+    });
+
+    document.getElementById("tables").innerHTML = html;
+
+})
+.catch(err => {
+    document.getElementById("tables").innerHTML =
+    "<h2>Could not load standings data.</h2>";
+    console.error(err);
+});
+
+</script></body>
+</html>
