@@ -6,6 +6,12 @@
 <title>World Cup Standings</title>
 
 <style>
+    .group-note{
+    font-size:12px;
+    opacity:0.8;
+    padding:8px 15px 12px 15px;
+    font-style:italic;
+}
 body{
     margin:0;
     font-family:Arial,sans-serif;
@@ -151,6 +157,9 @@ fetch(CSV_URL)
         html += `
         <div class="card">
             <div class="card-title">Group ${group}</div>
+<div class="group-note">
+Teams tied on points are ranked by Head-to-Head record.
+</div>
 
             <table>
                 <tr>
