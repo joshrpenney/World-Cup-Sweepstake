@@ -175,9 +175,7 @@ groups[group].push({
         `;
     });
 
-console.log(groups);
-document.getElementById("tables").innerHTML =
-"<pre>" + csv.substring(0,1000) + "</pre>";
+document.getElementById("tables").innerHTML = html;
 
 })
 .catch(err => {
