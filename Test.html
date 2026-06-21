@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="result">Loading...</div>
+
+<script>
+fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vTPhSNeUup100N4unv8AnAxVF6cdYU_VAch7jd3Majf4XxaILcrHbL4kGpo4jzNPXXty_UfiyKocEeZ/pub?gid=140422248&single=true&output=csv")
+.then(r => r.text())
+.then(data => {
+    document.getElementById("result").innerText = data.substring(0,500);
+})
+.catch(err => {
+    document.getElementById("result").innerText = err;
+});
+</script>
+
+</body>
+</html>
