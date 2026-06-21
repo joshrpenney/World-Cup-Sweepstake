@@ -175,7 +175,8 @@ groups[group].push({
         `;
     });
 
-    document.getElementById("tables").innerHTML = html;
+console.log(groups);
+document.getElementById("tables").innerHTML = "<h2>Loaded " + Object.keys(groups).length + " groups</h2>";
 
 })
 .catch(err => {
