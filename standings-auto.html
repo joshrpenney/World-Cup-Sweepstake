@@ -1,8 +1,11 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>World Cup Standings</title><style>
+<title>World Cup Standings</title>
+
+<style>
 body{
     margin:0;
     font-family:Arial,sans-serif;
@@ -81,56 +84,69 @@ td{
         font-size:12px;
     }
 }
-</style></head><body><div class="header">
+</style>
+</head>
+
+<body>
+
+<div class="header">
 🏆 World Cup Standings
-</div><div class="section"><a href="index.html" class="home-btn">⬅ Back Home</a>
+</div>
+
+<div class="section">
+<a href="index.html" class="home-btn">⬅ Back Home</a>
 
 <div id="tables">
 Loading standings...
-</div></div><script>
+</div>
+</div>
 
-const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTPhSNeUup100N4unv8AnAxVF6cdYU_VAch7jd3Majf4XxaILcrHbL4kGpo4jzNPXXty_UfiyKocEeZ/pub?gid=140422248&single=true&output=csv";    
-    
+<script>
+
+const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTPhSNeUup100N4unv8AnAxVF6cdYU_VAch7jd3Majf4XxaILcrHbL4kGpo4jzNPXXty_UfiyKocEeZ/pub?gid=140422248&single=true&output=csv";
+
 fetch(CSV_URL)
-.then(r => {
-    console.log("Fetch status:", r.status);
-    return r.text();
-})
+.then(response => response.text())
 .then(csv => {
 
-    const rows = csv.trim().split("\n")
-        .map(r => r.split(","));
-
-    const data = rows.slice(1);
+    const rows = csv.trim().split(/\r?\n/);
 
     const groups = {};
 
-    data.forEach(row => {
+    for(let i = 1; i < rows.length; i++){
+
+        const row = rows[i].split(",");
 
         const group = row[0];
+
+        if(!group) continue;
 
         if(!groups[group]){
             groups[group] = [];
         }
 
-groups[group].push({
-    pos: groups[group].length + 1,
-    team: row[1],
-    p: row[2],
-    w: row[3],
-    d: row[4],
-    l: row[5],
-    gf: row[6],
-    ga: row[7],
-    gd: row[8],
-    pts: row[9]
-});
-
-    });
+        groups[group].push({
+            team: row[1],
+            p: Number(row[2]) || 0,
+            w: Number(row[3]) || 0,
+            d: Number(row[4]) || 0,
+            l: Number(row[5]) || 0,
+            gf: Number(row[6]) || 0,
+            ga: Number(row[7]) || 0,
+            gd: Number(row[8]) || 0,
+            pts: Number(row[9]) || 0
+        });
+    }
 
     let html = "";
 
-    Object.keys(groups).forEach(group => {
+    Object.keys(groups).sort().forEach(group => {
+
+        groups[group].sort((a,b) =>
+            b.pts - a.pts ||
+            b.gd - a.gd ||
+            b.gf - a.gf
+        );
 
         html += `
         <div class="card">
@@ -155,7 +171,7 @@ groups[group].push({
 
             html += `
             <tr class="${index < 2 ? 'qualify' : ''}">
-                <td>${team.pos}</td>
+                <td>${index + 1}</td>
                 <td class="team">${team.team}</td>
                 <td>${team.p}</td>
                 <td>${team.w}</td>
@@ -175,14 +191,16 @@ groups[group].push({
         `;
     });
 
-document.getElementById("tables").innerHTML = html;
+    document.getElementById("tables").innerHTML = html;
 
 })
-.catch(err => {
+.catch(error => {
     document.getElementById("tables").innerHTML =
-    "<h2>Could not load standings data.</h2>";
-    console.error(err);
+        "<h2>Could not load standings data.</h2>";
+    console.error(error);
 });
 
-</script></body>
+</script>
+
+</body>
 </html>
