@@ -1,33 +1,400 @@
-<h2>Round of 32</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<div class="match"><div class="team">🏆 1A</div><div class="vs">vs</div><div class="team">⭐ Best 3rd</div></div>
+<title>World Cup Bracket</title>
 
-<div class="match"><div class="team">🥈 2B</div><div class="vs">vs</div><div class="team">🥈 2C</div></div>
+<style>
 
-<div class="match"><div class="team">🏆 1D</div><div class="vs">vs</div><div class="team">⭐ Best 3rd</div></div>
+*{
+    box-sizing:border-box;
+}
 
-<div class="match"><div class="team">🏆 1E</div><div class="vs">vs</div><div class="team">🥈 2F</div></div>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#071b3a;
+    color:white;
+}
 
-<div class="match"><div class="team">🏆 1G</div><div class="vs">vs</div><div class="team">🥈 2H</div></div>
+.header{
+    background:#0d2d63;
+    text-align:center;
+    padding:25px;
+}
 
-<div class="match"><div class="team">🏆 1I</div><div class="vs">vs</div><div class="team">🥈 2J</div></div>
+.header h1{
+    margin:0;
+    font-size:34px;
+}
 
-<div class="match"><div class="team">🏆 1K</div><div class="vs">vs</div><div class="team">🥈 2L</div></div>
+.header p{
+    margin:8px 0 0;
+    opacity:.8;
+}
 
-<div class="match"><div class="team">🏆 1B</div><div class="vs">vs</div><div class="team">⭐ Best 3rd</div></div>
+.section{
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
 
-<div class="match"><div class="team">🏆 1C</div><div class="vs">vs</div><div class="team">⭐ Best 3rd</div></div>
+.home-btn{
+    display:inline-block;
+    background:#163a72;
+    color:white;
+    text-decoration:none;
+    padding:12px 22px;
+    border-radius:10px;
+    margin-bottom:20px;
+    font-weight:bold;
+}
 
-<div class="match"><div class="team">🥈 2A</div><div class="vs">vs</div><div class="team">🥈 2D</div></div>
+.round{
 
-<div class="match"><div class="team">🏆 1F</div><div class="vs">vs</div><div class="team">⭐ Best 3rd</div></div>
+    background:#112d5c;
+    border-radius:18px;
+    margin-bottom:30px;
+    overflow:hidden;
+    box-shadow:0 5px 14px rgba(0,0,0,.35);
 
-<div class="match"><div class="team">🏆 1H</div><div class="vs">vs</div><div class="team">🥈 2G</div></div>
+}
 
-<div class="match"><div class="team">🏆 1J</div><div class="vs">vs</div><div class="team">🥈 2I</div></div>
+.round-title{
 
-<div class="match"><div class="team">🏆 1L</div><div class="vs">vs</div><div class="team">🥈 2K</div></div>
+    background:#163a72;
+    padding:16px;
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
 
-<div class="match"><div class="team">🏆 1B</div><div class="vs">vs</div><div class="team">⭐ Best 3rd</div></div>
+}
 
-<div class="match"><div class="team">🏆 1C</div><div class="vs">vs</div><div class="team">⭐ Best 3rd</div></div>
+.match{
+
+    background:#16335f;
+    margin:18px;
+    border-radius:14px;
+    padding:16px;
+
+}
+
+.team{
+
+    font-size:20px;
+    font-weight:bold;
+    padding:8px;
+
+}
+
+.vs{
+
+    text-align:center;
+    color:#ffd54f;
+    font-weight:bold;
+    padding:8px;
+
+}
+
+@media(max-width:700px){
+
+.team{
+font-size:17px;
+}
+
+.round-title{
+font-size:22px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+
+<h1>🏆 FIFA World Cup 2026</h1>
+
+<p>Knockout Bracket</p>
+
+</div>
+
+<div class="section">
+
+<a href="index.html" class="home-btn">⬅ Back Home</a>
+
+<div class="round">
+
+<div class="round-title">
+
+Round of 32
+
+</div>
+
+<div class="match">
+
+<div class="team">🏆 Winner Group A</div>
+
+<div class="vs">vs</div>
+
+<div class="team">⭐ Best 3rd Place</div>
+
+</div>
+
+<div class="match">
+
+<div class="team">🥈 Runner-up Group B</div>
+
+<div class="vs">vs</div>
+
+<div class="team">🥈 Runner-up Group C</div>
+
+</div>
+
+<div class="match">
+
+<div class="team">🏆 Winner Group D</div>
+
+<div class="vs">vs</div>
+
+<div class="team">⭐ Best 3rd Place</div>
+
+</div>
+
+<div class="match">
+
+<div class="team">🏆 Winner Group E</div>
+
+<div class="vs">vs</div>
+
+<div class="team">🥈 Runner-up Group F</div>
+
+</div>
+
+<div class="match">
+
+<div class="team">🏆 Winner Group G</div>
+
+<div class="vs">vs</div>
+
+<div class="team">🥈 Runner-up Group H</div>
+
+</div>
+
+<div class="match">
+
+<div class="team">🏆 Winner Group I</div>
+
+<div class="vs">vs</div>
+
+<div class="team">🥈 Runner-up Group J</div>
+
+</div>
+
+<div class="match">
+
+<div class="team">🏆 Winner Group K</div>
+
+<div class="vs">vs</div>
+
+<div class="team">🥈 Runner-up Group L</div>
+
+</div>
+
+<div class="match">
+
+<div class="team">🏆 Winner Group B</div>
+
+<div class="vs">vs</div>
+
+<div class="team">⭐ Best 3rd Place</div>
+
+</div>
+
+<div class="match">
+
+<div class="team">🏆 Winner Group C</div>
+
+<div class="vs">vs</div>
+
+<div class="team">⭐ Best 3rd Place</div>
+
+</div>
+
+<div class="match">
+
+<div class="team">🥈 Runner-up Group A</div>
+
+<div class="vs">vs</div>
+
+<div class="team">🥈 Runner-up Group D</div>
+
+</div>
+
+<div class="match">
+
+<div class="team">🏆 Winner Group F</div>
+
+<div class="vs">vs</div>
+
+<div class="team">⭐ Best 3rd Place</div>
+
+</div>
+
+<div class="match">
+
+<div class="team">🏆 Winner Group H</div>
+
+<div class="vs">vs</div>
+
+<div class="team">🥈 Runner-up Group G</div>
+
+</div>
+
+<div class="match">
+
+<div class="team">🏆 Winner Group J</div>
+
+<div class="vs">vs</div>
+
+<div class="team">🥈 Runner-up Group I</div>
+
+</div>
+
+<div class="match">
+
+<div class="team">🏆 Winner Group L</div>
+
+<div class="vs">vs</div>
+
+<div class="team">🥈 Runner-up Group K</div>
+
+</div>
+
+<div class="match">
+
+<div class="team">🏆 Winner Group A</div>
+
+<div class="vs">vs</div>
+
+<div class="team">⭐ Best 3rd Place</div>
+
+</div>
+
+<div class="match">
+
+<div class="team">🏆 Winner Group C</div>
+
+<div class="vs">vs</div>
+
+<div class="team">⭐ Best 3rd Place</div>
+
+</div>
+
+</div>
+<div class="round">
+
+<div class="round-title">
+Round of 16
+</div>
+
+<div class="match"><div class="team">Winner Match 1</div></div>
+<div class="match"><div class="team">Winner Match 2</div></div>
+<div class="match"><div class="team">Winner Match 3</div></div>
+<div class="match"><div class="team">Winner Match 4</div></div>
+<div class="match"><div class="team">Winner Match 5</div></div>
+<div class="match"><div class="team">Winner Match 6</div></div>
+<div class="match"><div class="team">Winner Match 7</div></div>
+<div class="match"><div class="team">Winner Match 8</div></div>
+
+</div>
+
+<div class="round">
+
+<div class="round-title">
+Quarter-finals
+</div>
+
+<div class="match">
+<div class="team">Winner Round of 16 Match 1</div>
+</div>
+
+<div class="match">
+<div class="team">Winner Round of 16 Match 2</div>
+</div>
+
+<div class="match">
+<div class="team">Winner Round of 16 Match 3</div>
+</div>
+
+<div class="match">
+<div class="team">Winner Round of 16 Match 4</div>
+</div>
+
+</div>
+
+<div class="round">
+
+<div class="round-title">
+Semi-finals
+</div>
+
+<div class="match">
+<div class="team">Winner Quarter-final 1</div>
+</div>
+
+<div class="match">
+<div class="team">Winner Quarter-final 2</div>
+</div>
+
+</div>
+
+<div class="round">
+
+<div class="round-title">
+🏆 Final
+</div>
+
+<div class="match">
+
+<div class="team">
+Winner Semi-final 1
+</div>
+
+<div class="vs">
+vs
+</div>
+
+<div class="team">
+Winner Semi-final 2
+</div>
+
+</div>
+
+</div>
+
+<div class="round">
+
+<div class="round-title">
+👑 World Champion
+</div>
+
+<div class="match">
+
+<div class="team" style="text-align:center;font-size:30px;">
+🏆 Champion
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
